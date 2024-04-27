@@ -59,3 +59,58 @@ function obtenerPares(arr) {
 function pintarArray(arr) {
   return `[${arr}]`.replaceAll(",", ", ");
 }
+
+function arrayMapi(arr, func) {
+  return arr.map((i) => func(i));
+}
+
+function eliminarDuplicados(arr) {
+  return arr.filter((v, i) => arr.indexOf(v) === i);
+}
+
+// Project
+// Arrays
+let arrayNumerosNeg = [...Array(10).keys()].map((v) => (v === 0 ? 0 : -v));
+let holaMundo = ["Hola", "Mundo"];
+let loGuardoTodo = ["hola", "que", 23, 42.33, "tal"];
+let arrayDeArrays = [
+  [756, "nombre"],
+  [225, "apellido"],
+  [298, "direccion"],
+];
+
+// Funciones
+function multiplicacion(num1, num2) {
+  return num1 * num2;
+}
+
+function division(num, div) {
+  return num / div;
+}
+
+function esPar(num) {
+  return num % 2 == 0;
+}
+
+function resta(num1, num2) {
+  return num1 - num2;
+}
+
+let arrayFunciones = [suma, resta, multiplicacion];
+
+// Arrays and functions
+function ordenarArray2(arr) {
+  return arr.sort((a, b) => a > b);
+}
+
+function obtenerImpares(arr) {
+  return arr.filter((v) => v % 2 !== 0);
+}
+
+function sumarArray(arr) {
+  return arr.reduce((acc, v) => (acc += v));
+}
+
+function multiplicarArray(arr) {
+  return arr.reduce((acc = 1, v) => (acc *= v));
+}
